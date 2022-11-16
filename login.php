@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Membuat Login</title>
 </head>
+<center>
 <body>
     <h2>Latihan Login XII RPL SMKN 1 SAYUNG</h2>
     <br/>
@@ -43,5 +44,6 @@
 </tr>
 </table>
 </form>
+</center>
 </body>
 </html>

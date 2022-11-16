@@ -8,6 +8,7 @@
     <form action="proses_tambah.php" method="POST">
         <form>
             <fieldset>
+            <h4><a href="logout.php">BACK</a></h4>
      <p>
         <label for="nik">NIK:</label>
         <input type="number" name="nik"/>
