@@ -1,8 +1,18 @@
 <html>
     <head>
 </head>
+<center>
 <body>
+    <?php
+    session_start();
+
+    if($_SESSION['status']!="login"){
+        header("location:../index.php?pesan=belum_login");
+    }
+?>
+<h4>Selamat Datang, <?php echo $_SESSION['username'];?>! anda telah login.</h4>
     <h1>Pendataan Warga DS.Sukamududur</h1>
+    <h4><a href="logout.php">LOGOUT</a></h4>
     <table border="1">
         <tr>
             <th>Id</th>
@@ -11,6 +21,7 @@
             <th>Agama</th>
             <th>Aksi</th>
         </tr>
+
 <?php
 include("koneksi.php");
 $sql='SELECT * FROM tb_penduduk';
@@ -30,5 +41,7 @@ while($nanda_3nov=mysqli_fetch_array($query)){
 }
 ?>
 </table>
+<h4><a href ="tambah.php"><input type="submit" value="tambah" name="tambah"/></h4></a>
+</center>
 </body>
 </html>
