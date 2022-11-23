@@ -5,7 +5,8 @@
 </head>
 <body>
     <h1>Pendataan Warga DS.Sukamududur</h1>
-    <form action="proses_tambah.php" method="POST">
+    <form action="proses_tambah.php" method="POST">                        
+        
         <form>
             <fieldset>
             <h4><a href="logout.php">BACK</a></h4>

@@ -36,19 +36,10 @@
     <td>:</td>
     <td><input type="password" name="password" placeholder="Masukan password"></td>  
 </tr>
-<td>umur</td>
-    <td>:</td>
-    <td><input type="umur" name="umur" placeholder="Masukan umur"></td>  
-</tr>
-<td>gmail</td>
-    <td>:</td>
-    <td><input type="gmail" name="gmail" placeholder="Masukan gmail"></td>  
-</tr>
 <tr>
     <td></td>
     <td></td>
-    <td><input type="submit" value="LOGIN">
-    <a href ="tambah_daftar.php"><input type="button" value="DAFTAR" name="DAFTAR"/></a></td>
+    <td> <a href ="login.php"><input type="button" value="DAFTAR" name="DAFTAR"/></a></td>
 </tr>
 </table>
 </form>
