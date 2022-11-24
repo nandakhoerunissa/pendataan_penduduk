@@ -12,11 +12,11 @@
      <a href ="daftar.php"><input type="button" value="keluar" name="keluar"/></a>
     <p>
         <label for="username">Username:</label>
-        <input type="text" name="nama"/>
+        <input type="text" name="username"/>
 </p>
 <p>
         <label for="password">Password:</label>
-        <input type="text" name="nama"/>
+        <input type="password" name="password"/>
 </p>
 <p>
         <label for="umur">Umur:</label>

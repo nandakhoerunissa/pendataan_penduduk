@@ -12,6 +12,18 @@
 ?>
 <h4>Selamat Datang, <?php echo $_SESSION['username'];?>! anda telah login.</h4>
     <h1>Pendataan Warga DS.Sukamududur</h1>
+    <form action="penduduk.php" method="get">
+	<label>Cari :</label>
+	<input type="text" name="cari">
+	<input type="submit" value="Cari">
+</form>
+
+<?php 
+if(isset($_GET['cari'])){
+	$cari = $_GET['cari'];
+	echo "<b>Hasil pencarian : ".$cari."</b>";
+}
+?>
     <h4><a href="logout.php">LOGOUT</a></h4>
     <table border="1">
         <tr>
@@ -24,8 +36,14 @@
 
 <?php
 include("koneksi.php");
+if(isset($_GET['cari'])){
+    $cari=$_GET['cari'];
+    $sql="SELECT * FROM tb_penduduk WHERE nama LIKE '%" .$cari."%'";
+    $query=mysqli_query($koneksi,$sql);
+}else{
 $sql='SELECT * FROM tb_penduduk';
 $query=mysqli_query($koneksi,$sql);
+}
 while($nanda_3nov=mysqli_fetch_array($query)){
     echo"<tr>";
     echo"<td>".$nanda_3nov['id']."</td>";

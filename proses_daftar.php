@@ -1,7 +1,7 @@
 <?php
 include("koneksi.php");
 
-if(isset($_POST['tambah'])){
+if(isset($_POST['kirim'])){
     $username=$_POST['username'];
     $password=$_POST['password'];
     $umur=$_POST['umur'];
@@ -9,8 +9,11 @@ if(isset($_POST['tambah'])){
 
     $sql="INSERT INTO user (username,password,umur,gmail) VALUES('$username','$password','$umur','$gmail')";
     $query=mysqli_query($koneksi,$sql);
+if($query){
+header('location:login.php?status=sukses');
 }
 else{
-     ("akses dilarang");
+    header('location:login.php?status=gagal');
+}
 }
 ?>
